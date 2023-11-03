@@ -1,0 +1,36 @@
+/* .carbon{
+  background-color: #1E1E1E;
+}
+
+.gris{
+  background-color: #4F4F4F;
+}
+
+.blanco{
+  background-color: #EAEAEA;
+}
+
+.rojo{
+  background-color: #800020;
+}
+
+.dorado{
+  background-color: #DAA520;
+} */
+
+.nav-bg{
+  background-color: #1E1E1E;
+}
+
+.links-color{
+  color:#DAA520;
+  opacity: 0.8;
+}
+.links-color:active{
+  color:#DAA520;
+  opacity: 1;
+}
+.links-color:hover{
+  color:#DAA520;
+  opacity: 1;
+}
