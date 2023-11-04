@@ -17,9 +17,11 @@
 .dorado{
   background-color: #DAA520;
 } */
-
-.nav-bg{
+.bg-dark{
   background-color: #1E1E1E;
+}
+.nav-bg{
+  background-color: #4F4F4F;
 }
 
 .links-color{
@@ -34,3 +36,4 @@
   color:#DAA520;
   opacity: 1;
 }
+
