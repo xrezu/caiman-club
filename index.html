@@ -1,5 +1,4 @@
-<!-- TODO: #1 
-  - AÑADIR LOGO EN HEADER.
+<!-- TODO: #1
   - AJUSTAR LA SECCION DE LAS OFERTAS A NOSOTROS
   - LINKEAR LOS BOTONES DE LAS OFERTAS A PEDIR CITA EN LA PAGINA LINEA -140, -190 Y -237
   - ARREGLAR EL SELECTOR EN EL APARTADO DE PEDIR CITA
@@ -13,7 +12,7 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="colors.css">
+  <link rel="stylesheet" href="styles/colors.css">
   <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           rel="stylesheet"
@@ -30,57 +29,48 @@
   />
   <link rel="stylesheet" href="styles/colors.css">
 </head>
-<body>
+<body class="blanco">
 <header>
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img
-                src="src/img/MyBarbershop-logo.svg"
-                class="me-2"
-                height="20"
-                alt="MyBarbershop Logo"
-                loading="lazy"
-        />
+      <a class="navbar-brand" href="index.html">
+        <img src="src/img/MyBarbershop-logo.svg" class="me-2" height="40" alt="MyBarbershop Logo" loading="lazy"/>
         <small>MyBarbershop</small>
       </a>
-    </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm nav-bg sticky-top">
-    <div class="container-fluid">
-
-      <button
-              class="navbar-toggler"
-              type="button"
+      <button class="navbar-toggler" type="button"
               data-mdb-toggle="collapse"
               data-mdb-target="#navbarTogglerDemo01"
               aria-controls="navbarTogglerDemo01"
               aria-expanded="false"
-              aria-label="Toggle navigation"
-      >
+              aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="links-color nav-link" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="links-color nav-link" href="pages/pedir-cita.html">Pedir cita</a>
-          </li>
-          <li class="nav-item">
-            <a class="links-color nav-link" href="pages/servicios.html">Nuestros servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="links-color nav-link" href="pages/about-us.html">¿Quienes somos?</a>
-          </li>
-        </ul>
-      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm nav-bg sticky-top">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="links-color nav-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="links-color nav-link" href="pages/pedir-cita.html">Pedir cita</a>
+        </li>
+        <li class="nav-item">
+          <a class="links-color nav-link" href="pages/servicios.html">Nuestros servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="links-color nav-link" href="pages/about-us.html">¿Quienes somos?</a>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
 
-<main>
+
+
+<main >
   <div class="container">
     <!--CARRUSEL-->
     <div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
@@ -272,94 +262,7 @@
     <!-- Section: Pricing -->
 
     <!-- Section: Contact -->
-    <section class="mb-5 mb-lg-10">
 
-      <h3 class="fw-bold text-center mb-5">Pide cita</h3>
-
-      <div class="row gx-xl-5">
-
-        <div class="col-lg-4 mb-4 mb-lg-0">
-
-          <form>
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="form4Example1" class="form-control"/>
-              <label class="form-label" for="form4Example1">Nombre</label>
-            </div>
-
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="form4Example2" class="form-control"/>
-              <label class="form-label" for="form4Example2">Correo</label>
-            </div>
-
-            <!-- fecha -->
-            <div class="form-outline mb-4">
-              <input type="datetime-local" id="datepicker" class="form-control form-icon-trailing"/>
-              <label class="form-label" for="datepicker"></label>
-              <div id="datePickerContainer"></div>
-            </div>
-
-            <!-- Message input -->
-            <div class="form-outline mb-4">
-              <textarea class="form-control" id="form4Example5" rows="4"></textarea>
-              <label class="form-label" for="form4Example3">Observaciones</label>
-            </div>
-
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form4Example6" checked/>
-              <label class="form-check-label" for="form4Example4">
-                Send me a copy of this message
-              </label>
-            </div>
-
-
-        </div>
-
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <form action="">
-            <!-- surname input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="form4Example3" class="form-control"/>
-              <label class="form-label" for="form4Example1">apellido</label>
-            </div>
-
-            <!-- number input -->
-            <div class="form-outline mb-4">
-              <input type="number" id="typeNumber" class="form-control"/>
-              <label class="form-label" for="typeNumber">Number input</label>
-            </div>
-
-            <!-- selector -->
-            <div class="form-outline mb-4">
-              <select class="form-select" id="selector">
-                <option value="" selected>Selecciona una opción</option>
-                <option value="opcion1">Opción 1</option>
-                <option value="opcion2">Opción 2</option>
-                <option value="opcion3">Opción 3</option>
-              </select>
-              <label class="form-label" for="selector"></label>
-            </div>
-
-          </form>
-        </div>
-
-        <div class="col-lg-4 mb-4 mb-lg-0">
-
-        </div>
-
-      </div>
-
-      <div class="row gx-xl-5">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
-          </form>
-        </div>
-      </div>
-
-    </section>
     <!-- Section: Contact -->
   </div>
 </main>
