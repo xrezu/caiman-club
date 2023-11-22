@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>El Caiman Club</title>
+</head>
+<body class="bg-gray-200">
+<!-- Navbar -->
+<nav class="bg-white p-4">
+    <div class="container mx-auto flex justify-between items-center bg-white">
+        <!--Logo -->
+        <div>
+            <a href="#"><img src="..\src\img\logo\caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
+        </div>
+        <!--Elementos del menú-->
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="text-pink-600 hover:text-pink-900">Carta</a>
+            <a href="#" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+            <a href="#" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+            <a href="#" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+            <a href="#" class="text-pink-600 hover:text-pink-900">Shop</a>
+        </div>
+
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Menú desplegable para dispositivos móviles -->
+<div id="menu" class="md:hidden hidden bg-white p-4">
+    <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
+    <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
+    <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
+    <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
+    <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
+</div>
