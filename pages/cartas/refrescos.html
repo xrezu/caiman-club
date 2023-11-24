@@ -4,8 +4,51 @@
   <meta charset="UTF-8">
   <title>El Caiman Club</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      body {
+          color: #fff; /* Texto en blanco */
+          font-family: 'Roboto', sans-serif;
+      }
+
+      .carta {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: #264653; /* Fondo oscuro tropical */
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .titulo-carta {
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #3a86ff; /* Azul claro para un toque fresco y refrescante */
+      }
+
+      .categoria {
+          margin-bottom: 15px;
+      }
+
+      .contenido {
+          color: #38b2ac; /* Azul turquesa tropical para los nombres de los cócteles */
+          font-weight: bold;
+      }
+
+      .producto {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+      }
+
+      .precio {
+          color: #e76f51; /* Color tropical para los precios */
+          font-weight: bold;
+      }
+  </style>
+
 </head>
-<body>
+<body class="bg-gray-200">
 <header>
   <!-- Navbar -->
   <nav class="bg-white p-4">
@@ -48,7 +91,20 @@
 </header>
 
 <main>
+  <div class="carta">
+    <div class="titulo-carta" style="color: #3a86ff;">Refrescos</div>
 
+    <div class="categoria">
+      <div class="producto"><span class="contenido">Coca-cola</span> <span class="precio">2,80€</span></div>
+      <div class="producto"><span class="contenido">Schweppe Limon</span> <span class="precio">2,80€</span></div>
+      <div class="producto"><span class="contenido">Schweppe Naranja</span> <span class="precio">2,80€</span></div>
+      <div class="producto"><span class="contenido">SevenUp</span> <span class="precio">2,80€</span></div>
+      <div class="producto"><span class="contenido">Tonica</span> <span class="precio">2,80€</span></div>
+      <div class="producto"><span class="contenido">Aquarius</span> <span class="precio">2,80€</span></div>
+      <div class="producto"><span class="contenido">Zumos</span> <span class="precio">2,30€</span></div>
+      <div class="producto"><span class="contenido">Agua</span> <span class="precio">1,30€</span></div>
+    </div>
+  </div>
 </main>
 
 <script src="../../js/script.js"></script>
