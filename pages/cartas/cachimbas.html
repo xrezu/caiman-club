@@ -3,9 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>El Caiman Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      .carta {
+          max-width: 800px;
+          margin: 20px auto;
+          background-color: #264653; /* Color de fondo oscuro tropical */
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      .titulo-carta {
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #2a9d8f; /* Color tropical para el título */
+      }
+      .titulo-categoria {
+          font-size: 24px;
+          font-weight: bold;
+          border-bottom: 2px solid #e9c46a; /* Borde dorado para categorías */
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          color: #f4a261; /* Color cálido para títulos de categorías */
+      }
+      .producto {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+      }
+      .precio {
+          color: #e76f51; /* Color tropical para los precios */
+          font-weight: bold;
+      }
+      .contenido{
+          color: #38b2ac;
+      }
+  </style>
 </head>
-<body>
+<body class=" bg-green-100">
 <header>
   <!-- Navbar -->
   <nav class="bg-white p-4">
@@ -46,6 +83,59 @@
     <a href="../shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
   </div>
 </header>
+
+<main>
+  <div class="container mx-auto p-8">
+    <div class="carta">
+      <div class="titulo-carta">Cachimbas</div>
+
+      <div class="categoria">
+        <div class="titulo-categoria">Shisha Tradicional - 10€</div>
+        <div class="producto"><span class="contenido">La 66</span> <span class="precio">Sabor afrutado con melón, sandia, maracuyá...</span></div>
+        <div class="producto"><span class="contenido">Cheesecake</span> <span class="precio">Tarta de queso, vainilla...</span></div>
+        <div class="producto"><span class="contenido">El Amor</span> <span class="precio">Piña y Plátano frescos</span></div>
+        <div class="producto"><span class="contenido">Hawaiana</span> <span class="precio">Piña y melocotón</span></div>
+        <div class="producto"><span class="contenido">The Fresh</span> <span class="precio">Sandia fresca</span></div>
+        <div class="producto"><span class="contenido">The Dark</span> <span class="precio">Muffin de arándanos , vainilla</span></div>
+        <div class="producto"><span class="contenido">Veton </span> <span class="precio">Tiramisú</span></div>
+        <div class="producto"><span class="contenido">La Fresca</span> <span class="precio">Hielo y menta</span></div>
+        <div class="producto"><span class="contenido">La Franbues </span> <span class="precio"> Tarta de franbuesa</span></div>
+        <div class="producto"><span class="contenido">La Gofre </span> <span class="precio">Gofre belga y sirope de fresa</span></div>
+        <div class="producto"><span class="contenido">La Forr </span> <span class="precio">Fresa,hielo,melon</span></div>
+        <div class="producto"><span class="contenido">La Rouge </span> <span class="precio"> Higos, membrillo, fresa y sandia</span></div>
+        <div class="producto"><span class="contenido">Fuck 66</span> <span class="precio"> Love 66, Mejorada</span></div>
+        <div class="producto"><span class="contenido">Cactus </span> <span class="precio">Helado de fresa y cactus</span></div>
+        <div class="producto"><span class="contenido">Cactus Fruit</span> <span class="precio"> Cactus cremoso, melocotón, sandia y vainilla</span></div>
+        <div class="producto"><span class="contenido">Smint </span> <span class="precio"> Caramelo de menta</span></div>
+        <div class="producto"><span class="contenido">Amber </span> <span class="precio">Citricos</span></div>
+        <div class="producto"><span class="contenido">Laki </span> <span class="precio">Kiwi</span></div>
+        <div class="producto"><span class="contenido">La China</span> <span class="precio">Lichi</span></div>
+        <div class="producto"><span class="contenido">The Red</span> <span class="precio">Frutos rojos</span></div>
+        <div class="producto"><span class="contenido">Code </span> <span class="precio">Avellanas y chocolate</span></div>
+        <div class="producto"><span class="contenido">Strada </span> <span class="precio">Batido de fresa</span></div>
+        <div class="producto"><span class="contenido">The Lemon</span> <span class="precio">Tarta de limon</span></div>
+        <div class="producto"><span class="contenido">La Fiesta</span> <span class="precio">Algodón azúcar, arándanos, mango y sandia</span></div>
+        <div class="producto"><p class="precio">Convertirla en BAZOKA +2€</p></div>
+        <!-- ... más sabores ... -->
+      </div>
+
+      <div class="categoria">
+        <div class="titulo-categoria">Shisha Premium - 12€</div>
+        <div class="producto"><span class="contenido">La Selva</span> <span class="precio">Mezclas del maestro, afrutada y fresquita.</span></div>
+        <div class="producto"><span class="contenido">El Caimán</span> <span class="precio">Mezclas del maestro, dulcecita y suave.</span></div>
+        <div class="producto"><span class="contenido">La Tuya</span> <span class="precio">Crea tus Propias MEZCLAS !!!</span></div>
+        <div class="producto"><p class="precio">Convertirla en BAZOKA +2€</p></div>
+        <!-- ... más sabores ... -->
+      </div>
+
+      <div class="categoria">
+        <div class="titulo-categoria">Vapeadores, Pods - 7€</div>
+        <p class="contenido">Sabores variados ¡Puedes elegir!</p>
+      </div>
+
+    </div>
+  </div>
+</main>
 
 </body>
 </html>
