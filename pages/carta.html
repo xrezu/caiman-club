@@ -7,13 +7,21 @@
   <title>El Caiman Club</title>
   <style>
       .height-adjusted {
-          height: calc(100vh - 87.98px);
+          height: calc(100vh - 87.98px); /* Ajuste la altura si es necesario */
       }
+
       .recomendacion {
           width: 274.65px; /* Ancho fijo */
           height: 330px; /* Alto fijo */
           /* ... Otros estilos ... */
       }
+
+      @media (max-width: 768px) {
+          .recomendacion {
+              display: none; /* Ocultar en pantallas medianas y pequeñas */
+          }
+      }
+
       /*TODO DESCOMENTAR LOS ESTILOS DEL MAIN CUANDO SE TENGAN LAS IMAGENES DE LAS CATEGORIAS*/
       /*main {*/
       /*    background-image: url('/src/img/fondos/fondo-carta.jpeg'); !* Añade tu propia imagen aquí *!*/
@@ -24,13 +32,13 @@
   </style>
 </head>
 <body class="bg-gray-200">
-<header>
+<header class="fixed w-full z-10">
   <!-- Navbar -->
   <nav class="bg-white p-4">
     <div class="container mx-auto flex justify-between items-center bg-white">
       <!--Logo -->
       <div>
-        <a href="#"><img src="..\src\img\logo\caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%"
+        <a href="#"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%"
                          width="35%"></a>
       </div>
       <!--Elementos del menú-->
@@ -63,79 +71,85 @@
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
   </div>
 </header>
-<main>
+
+<main class="pt-16"> <!-- Agregue padding-top para compensar el header fijo -->
   <!-- Contenido de la página -->
-  <div class="container mx-auto p-8 height-adjusted flex flex-col justify-center items-center">
+  <div class="container mx-auto p-8 height-adjusted flex flex-col justify-center items-center ">
 
     <!-- Contenedor de Categorías -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:flex lg:flex lg:flex-row gap-4 mt-52 md:mt-0 lg:mt-0">
+      <!-- Ajuste las clases aquí para pantallas grandes -->
 
       <!-- Categoría Combinados -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/combinados.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="Combinados" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Combinados</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/combinados.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Combinados" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Combinados</p>
         </a>
       </div>
 
       <!-- Categoría Cachimbas -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/cachimbas.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="cachimbas" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Cachimbas</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/cachimbas.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Cachimbas" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Cachimbas</p>
         </a>
       </div>
 
       <!-- Categoría Cócteles -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/cocteles.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="cocteles" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Cocteles</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/cocteles.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Cócteles" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Cócteles</p>
         </a>
       </div>
 
       <!-- Categoría Cervezas -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/cervezas.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="cervezas" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Cervezas</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/cervezas.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Cervezas" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Cervezas</p>
         </a>
       </div>
 
       <!-- Categoría Vinos -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/vinos.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="vinos" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Vinos</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/vinos.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Vinos" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Vinos</p>
         </a>
       </div>
 
       <!-- Categoría Refrescos -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/refrescos.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="refrescos" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Refrescos</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/refrescos.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Refrescos" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Refrescos</p>
         </a>
       </div>
 
       <!-- Categoría Batidos -->
-      <div class="block lg:w-32 lg:h-32 text-center">
-        <a href="cartas/batidos.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
-          <img src="" alt="batidos" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
-          <p class="text-sm font-semibold mt-2">Batidos</p>
+      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center">
+        <a href="cartas/batidos.html" class="focus-target" data-message="" data-image="" data-description="">
+          <img src="" alt="Batidos" class="w-full h-full rounded-lg shadow object-cover">
+          <p class="text-sm font-semibold mt-2 hidden md:block">Batidos</p>
         </a>
       </div>
     </div>
 
-    <!-- Tarjeta de Recomendación Centralizada -->
-    <div class="recomendacion hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg z-10">
-      <img id="recomendacion-imagen" src="" alt="Imagen Recomendación" class="w-full h-auto"><!-- Imagen de la recomendación -->
-      <p id="recomendacion-texto"></p><!-- Texto de la recomendación -->
-      <p id="recomendacion-descripcion"></p><!-- Descripción de la recomendación -->
-    </div>
+  </div>
+
+  <!-- Tarjeta de Recomendación Centralizada -->
+  <div class="recomendacion hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg z-10">
+    <img id="recomendacion-imagen" src="" alt="Imagen Recomendación" class="w-full h-auto">
+    <!-- Imagen de la recomendación -->
+    <p id="recomendacion-texto"></p><!-- Texto de la recomendación -->
+    <p id="recomendacion-descripcion"></p><!-- Descripción de la recomendación -->
+  </div>
   </div>
 </main>
 
 <script src="/js/carta.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>

@@ -2,9 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>El Caiman Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      body {
+          background-color: #1a1a1a; /* Fondo oscuro para mayor misterio */
+          color: #fff; /* Texto en blanco */
+          font-family: 'Roboto', sans-serif;
+      }
+      .carta {
+          max-width: 800px;
+          margin: 20px auto;
+          background-color: #2a2a2a; /* Fondo ligeramente más claro para la carta */
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto flotante */
+      }
+      .titulo-carta {
+          font-family: 'Playfair Display', serif;
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #d2a679; /* Color dorado para el título */
+      }
+      .categoria {
+          margin-bottom: 15px;
+      }
+      .titulo-categoria {
+          font-size: 24px;
+          font-weight: bold;
+          border-bottom: 2px solid #d2a679;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+      }
+      .producto {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+      }
+      .precio {
+          color: #d2a679; /* Color dorado para los precios */
+          font-weight: bold;
+      }
+  </style>
 </head>
-<body>
+<body class="bg-gray-200">
+<header>
+  <!-- Navbar -->
+  <nav class="bg-white p-4">
+    <div class="container mx-auto flex justify-between items-center bg-white">
+      <!--Logo -->
+      <div>
+        <a href="#"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%"
+                         width="35%"></a>
+      </div>
+      <!--Elementos del menú-->
+      <div class="hidden md:flex space-x-4">
+        <a href="/index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
+        <a href="/pages/carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
+        <a href="/pages/reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
+        <a href="/pages/ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+        <a href="/pages/donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+        <a href="/pages/about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+        <a href="/pages/shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
+      </div>
 
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menú desplegable para dispositivos móviles -->
+  <div id="menu" class="md:hidden hidden bg-white p-4">
+    <a href="/pages/carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
+    <a href="/pages/reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
+    <a href="/pages/ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
+    <a href="/pages/donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
+    <a href="/pages/about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
+    <a href="/pages/shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
+  </div>
+</header>
+<main>
+  <div class="container mx-auto p-8">
+    <div class="carta">
+      <!-- Categoría: Ginebras -->
+      <div class="categoria">
+        <div class="titulo-categoria">GINEBRAS</div>
+        <div class="producto"><span>Beffeter</span> <span class="precio">7€</span></div>
+        <!-- ... Más productos ... -->
+        <div class="titulo-categoria">Premium</div>
+        <div class="producto"><span>Martin Millers</span> <span class="precio">9€</span></div>
+        <!-- ... Más productos ... -->
+      </div>
+
+      <!-- Categoría: Whisky -->
+      <div class="categoria">
+        <div class="titulo-categoria">WHISKY</div>
+        <div class="producto"><span>Ballantines</span> <span class="precio">7€</span></div>
+        <!-- ... Más productos ... -->
+        <div class="titulo-categoria">Premium</div>
+        <div class="producto"><span>Jack Daniels</span> <span class="precio">9€</span></div>
+        <!-- ... Más productos ... -->
+      </div>
+
+      <!-- ... Más categorías ... -->
+
+    </div>
+</main>
+</div>
 </body>
 </html>
