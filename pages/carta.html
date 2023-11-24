@@ -1,45 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>El Caiman Club</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>El Caiman Club</title>
+  <style>
+      .height-adjusted {
+          height: calc(100vh - 87.98px);
+      }
+      .recomendacion {
+          width: 274.65px; /* Ancho fijo */
+          height: 330px; /* Alto fijo */
+          /* ... Otros estilos ... */
+      }
+      /*TODO DESCOMENTAR LOS ESTILOS DEL MAIN CUANDO SE TENGAN LAS IMAGENES DE LAS CATEGORIAS*/
+      /*main {*/
+      /*    background-image: url('/src/img/fondos/fondo-carta.jpeg'); !* Añade tu propia imagen aquí *!*/
+      /*    background-size: cover;*/
+      /*    background-position: center;*/
+      /*    background-repeat: no-repeat;*/
+      /*}*/
+  </style>
 </head>
 <body class="bg-gray-200">
-<!-- Navbar -->
-<nav class="bg-white p-4">
+<header>
+  <!-- Navbar -->
+  <nav class="bg-white p-4">
     <div class="container mx-auto flex justify-between items-center bg-white">
-        <!--Logo -->
-        <div>
-            <a href="#"><img src="..\src\img\logo\caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
-        </div>
-        <!--Elementos del menú-->
-        <div class="hidden md:flex space-x-4">
-            <a href="#" class="text-pink-600 hover:text-pink-900">Carta</a>
-            <a href="#" class="text-pink-600 hover:text-pink-900">Reservas</a>
-            <a href="#" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
-            <a href="#" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
-            <a href="#" class="text-pink-600 hover:text-pink-900">Nosotros</a>
-            <a href="#" class="text-pink-600 hover:text-pink-900">Shop</a>
-        </div>
+      <!--Logo -->
+      <div>
+        <a href="#"><img src="..\src\img\logo\caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%"
+                         width="35%"></a>
+      </div>
+      <!--Elementos del menú-->
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="text-pink-600 hover:text-pink-900">Carta</a>
+        <a href="#" class="text-pink-600 hover:text-pink-900">Reservas</a>
+        <a href="#" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+        <a href="#" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+        <a href="#" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+        <a href="#" class="text-pink-600 hover:text-pink-900">Shop</a>
+      </div>
 
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<!-- Menú desplegable para dispositivos móviles -->
-<div id="menu" class="md:hidden hidden bg-white p-4">
+  <!-- Menú desplegable para dispositivos móviles -->
+  <div id="menu" class="md:hidden hidden bg-white p-4">
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
     <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
-</div>
+  </div>
+</header>
+<main>
+  <!-- Contenido de la página -->
+  <div class="container mx-auto p-8 height-adjusted flex flex-col justify-center items-center">
+
+    <!-- Contenedor de Categorías -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:gap-8">
+
+      <!-- Categoría Combinados -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/combinados.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="Combinados" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Combinados</p>
+        </a>
+      </div>
+
+      <!-- Categoría Cachimbas -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/cachimbas.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="cachimbas" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Cachimbas</p>
+        </a>
+      </div>
+
+      <!-- Categoría Cócteles -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/cocteles.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="cocteles" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Cocteles</p>
+        </a>
+      </div>
+
+      <!-- Categoría Cervezas -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/cervezas.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="cervezas" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Cervezas</p>
+        </a>
+      </div>
+
+      <!-- Categoría Vinos -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/vinos.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="vinos" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Vinos</p>
+        </a>
+      </div>
+
+      <!-- Categoría Refrescos -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/refrescos.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="refrescos" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Refrescos</p>
+        </a>
+      </div>
+
+      <!-- Categoría Batidos -->
+      <div class="block lg:w-32 lg:h-32 text-center">
+        <a href="cartas/batidos.html" class="focus-target" data-message="" data-image="" data-description=""><!--  TODO: Rellenar los campos data -->
+          <img src="" alt="batidos" class="w-full h-full rounded-lg shadow object-cover"><!--  TODO: Añadir imagen -->
+          <p class="text-sm font-semibold mt-2">Batidos</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Recomendación Centralizada -->
+    <div class="recomendacion hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg z-10">
+      <img id="recomendacion-imagen" src="" alt="Imagen Recomendación" class="w-full h-auto"><!-- Imagen de la recomendación -->
+      <p id="recomendacion-texto"></p><!-- Texto de la recomendación -->
+      <p id="recomendacion-descripcion"></p><!-- Descripción de la recomendación -->
+    </div>
+  </div>
+</main>
+
+<script src="/js/carta.js"></script>
+</body>
+</html>
