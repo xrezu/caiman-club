@@ -6,21 +6,23 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="font-sans bg-black">
+<!-- Navbar -->
+<header>
   <nav class="bg-white p-4">
     <div class="container mx-auto flex justify-between items-center bg-white">
         <!--Logo -->
         <div>
-            <a href="index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
+            <a href="../index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
         </div>
         <!--Elementos del menú-->
         <div class="hidden md:flex space-x-4">
-            <a href="#" class="text-pink-600 hover:text-pink-900">Inicio</a>
-            <a href="pages/carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
-            <a href="pages/reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
-            <a href="pages/ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
-            <a href="pages/donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
-            <a href="pages/about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
-            <a href="pages/shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
+            <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
+            <a href="carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
+            <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
+            <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+            <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+            <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+            <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
         </div>
 
         <div class="md:hidden">
@@ -32,7 +34,17 @@
         </div>
     </div>
 </nav>
-  <main class="pt-24">
+</header>
+<!-- Menú desplegable para dispositivos móviles -->
+<div id="menu" class="md:hidden hidden bg-white p-4">
+    <a href="pages/carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
+    <a href="pages/reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
+    <a href="pages/ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
+    <a href="pages/donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
+    <a href="pages/about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
+    <a href="pages/shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
+</div>
+  <main class="pt-18">
     <!-- Formulario de reserva -->
     <div class="container mx-auto flex justify-center items-center h-screen pt-10">
       <form class="max-w-md w-full md:w-2/3 lg:w-1/2 xl:w-1/3 p-8 bg-white rounded-lg shadow-lg">
