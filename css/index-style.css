@@ -2,5 +2,10 @@
   background-size: cover;
   background-image: url("../src/img/landingpage-bg.jpg");
   background-repeat: no-repeat;
+  height: 100vh;
+  backdrop-filter: blur(3px);
 }
 
+.neon-text {
+  text-shadow: 0 0 10px rgba(255, 0, 149, 0.8), 0 0 20px rgba(255, 0, 150, 0.8), 0 0 30px rgba(255, 0, 150, 0.8);
+}
