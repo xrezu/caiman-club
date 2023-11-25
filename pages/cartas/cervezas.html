@@ -4,46 +4,9 @@
   <meta charset="UTF-8">
   <title>El Caiman Club</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-      body {
-          background-color: #f3f4f6; /* Un fondo claro para contraste */
-      }
-
-      .carta {
-          max-width: 600px;
-          margin: 20px auto;
-          background-color: #fff5de; /* Un tono dorado claro */
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      }
-
-      .titulo-carta {
-          font-size: 32px;
-          text-align: center;
-          margin-bottom: 20px;
-          color: #d4af37; /* Color dorado para el título */
-      }
-
-      .contenido {
-          color: #8d6e63; /* Marrón suave para los nombres de las cervezas */
-          font-weight: bold;
-      }
-
-      .producto {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 5px;
-      }
-
-      .precio {
-          color: #4db6ac; /* Azul turquesa para un toque de frescura en los precios */
-          font-weight: bold;
-      }
-  </style>
-
+  <link rel="stylesheet" href="../../css/carta.css">
 </head>
-<body>
+<body class="bg-gray-200">
 <header>
   <!-- Navbar -->
   <nav class="bg-white p-4">
@@ -88,7 +51,7 @@
 
 <main>
   <div class="carta">
-    <div class="titulo-carta" style="color: #3a86ff;">Cervezas</div>
+    <div class="titulo-carta" ><b>CERVEZAS</b></div>
 
     <div class="categoria">
       <div class="producto"><span class="contenido">Tercio Mahou</span> <span class="precio">3,30€</span></div>
