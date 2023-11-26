@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Haz tu reserva!</title>
+  <!-- Conexion al CDN de TailwindCSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Importamos sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="font-sans bg-black">
 <!-- Navbar -->
@@ -46,7 +49,7 @@
 </div>
   <main class="pt-18">
     <!-- Formulario de reserva -->
-    <div class="container mx-auto flex justify-center items-center h-screen pt-10">
+    <div class="container mx-auto flex justify-center items-center h-screen pt-10" id="form-reserva">
       <form class="max-w-md w-full md:w-2/3 lg:w-1/2 xl:w-1/3 p-8 bg-white rounded-lg shadow-lg">
         <h2 class="text-2xl font-semibold mb-6">Información de Reserva</h2>
 
@@ -82,19 +85,12 @@
         </div>
 
         <!-- Botón de enviar -->
-        <button type="submit" class="bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 w-full">Enviar</button>
+        <button onClick="validarFormulario()" type="submit" class="bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 w-full">Enviar</button>
       </form>
     </div>
   </main>
 
   <script src="../js/script.js"></script>
-  <script>
-  const numComensalesRange = document.getElementById('numComensales');
-  const numComensalesValue = document.getElementById('numComensalesValue');
-
-  numComensalesRange.addEventListener('input', () => {
-    numComensalesValue.textContent = `Número de Comensales: ${numComensalesRange.value}`;
-  });
-  </script>
+  <script src="../js/form-validation.js"></script>
 </body>
 </html>
