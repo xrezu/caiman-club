@@ -8,7 +8,10 @@ numComensalesRange.addEventListener('input', () => {
 });
 
 // Creamos la función para validar el formulario
-function validarFormulario() {
+function validarFormulario(event) {
+  // Evitar el envío automático del formulario
+  event.preventDefault();
+
   // Obtenemos los valores de los campos de formulario
   var nombre = document.getElementById('nombre').value;
   var telefono = document.getElementById('telefono');
@@ -24,6 +27,7 @@ function validarFormulario() {
   if (!nombre || !telefono.value || !email.value || !fecha.value || !hora.value || !numComensales) {
     Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
     hayErrores = true;
+    return;
   }
 
   // Validación del formato del teléfono móvil
@@ -32,6 +36,7 @@ function validarFormulario() {
     Swal.fire('Error', 'Formato de teléfono móvil incorrecto. Debe tener 9 dígitos.', 'error');
     telefono.value = '';
     hayErrores = true;
+    return;
   }
 
   // Validación del formato de correo electrónico
@@ -40,6 +45,7 @@ function validarFormulario() {
     Swal.fire('Error', 'Formato de correo electrónico incorrecto.', 'error');
     email.value = '';
     hayErrores = true;
+    return;
   }
 
   // Validación de días y horarios permitidos
@@ -51,11 +57,13 @@ function validarFormulario() {
   if (dia < 4 || dia > 0) {
     Swal.fire('Error', 'Las reservas solo están disponibles de jueves a domingo.', 'error');
     hayErrores = true;
+    return;
   }
 
   if (horaReserva < horaLimiteInicio || horaReserva > horaLimiteFin) {
     Swal.fire('Error', 'Las reservas solo están disponibles de 20:30 a 2:30.', 'error');
     hayErrores = true;
+    return;
   }
 
   // Si hay errores, no se envía el formulario
@@ -71,8 +79,8 @@ function validarFormulario() {
     confirmButtonText: 'Ir a "Donde estamos"',
   }).then((result) => {
     if (result.isConfirmed) {
-      // Redirige a donde-estamos.html
-      window.location.href = 'donde-estamos.html';
+      // Envía el formulario manualmente
+      document.getElementById('miFormulario').submit();
     }
   });
 }
