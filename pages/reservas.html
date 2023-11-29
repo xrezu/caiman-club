@@ -3,51 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Haz tu reserva!</title>
+  <!-- Conexion al CDN de TailwindCSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Importamos sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="font-sans bg-black">
-<!-- Navbar -->
-<header>
+  <!-- Navbar -->
   <nav class="bg-white p-4">
     <div class="container mx-auto flex justify-between items-center bg-white">
-        <!--Logo -->
-        <div>
-            <a href="../index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
-        </div>
-        <!--Elementos del menú-->
-        <div class="hidden md:flex space-x-4">
-            <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
-            <a href="carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
-            <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
-            <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
-            <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
-            <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
-            <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
-        </div>
+      <!-- Logo -->
+      <div>
+        <a href="index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
+      </div>
+      <!-- Elementos del menú -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="text-pink-600 hover:text-pink-900">Inicio</a>
+        <a href="pages/carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
+        <a href="pages/reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
+        <a href="pages/ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+        <a href="pages/donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+        <a href="pages/about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+        <a href="pages/shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
+      </div>
 
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-</nav>
-</header>
-<!-- Menú desplegable para dispositivos móviles -->
-<div id="menu" class="md:hidden hidden bg-white p-4">
+  </nav>
+
+  <!-- Menú desplegable para dispositivos móviles -->
+  <div id="menu" class="md:hidden hidden bg-white p-4">
     <a href="pages/carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
     <a href="pages/reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
     <a href="pages/ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
     <a href="pages/donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
     <a href="pages/about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
     <a href="pages/shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
-</div>
+  </div>
+
   <main class="pt-18">
     <!-- Formulario de reserva -->
-    <div class="container mx-auto flex justify-center items-center h-screen pt-10">
-      <form class="max-w-md w-full md:w-2/3 lg:w-1/2 xl:w-1/3 p-8 bg-white rounded-lg shadow-lg">
+    <div class=" container mx-auto flex justify-center items-center h-screen pt-10" id="form-reserva">
+      <form id="formularioReservas" class="neon-bg max-w-md w-full md:w-2/3 lg:w-1/2 xl:w-1/3 p-8 bg-white rounded-lg shadow-lg">
         <h2 class="text-2xl font-semibold mb-6">Información de Reserva</h2>
 
         <div class="mb-4">
@@ -82,19 +86,13 @@
         </div>
 
         <!-- Botón de enviar -->
-        <button type="submit" class="bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 w-full">Enviar</button>
+        <button onClick="validarFormulario(event)" type="submit" class="bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 w-full">Enviar</button>
       </form>
     </div>
   </main>
 
   <script src="../js/script.js"></script>
-  <script>
-  const numComensalesRange = document.getElementById('numComensales');
-  const numComensalesValue = document.getElementById('numComensalesValue');
-
-  numComensalesRange.addEventListener('input', () => {
-    numComensalesValue.textContent = `Número de Comensales: ${numComensalesRange.value}`;
-  });
-  </script>
+  <script src="../js/form-validation.js"></script>
 </body>
 </html>
+

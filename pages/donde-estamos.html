@@ -2,55 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Título</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <nav class="bg-white p-4">
-    <div class="container mx-auto flex justify-between items-center bg-white">
-        <!--Logo -->
-        <div>
-            <a href="index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
-        </div>
-        <!--Elementos del menú-->
-        <div class="hidden md:flex space-x-4">
-            <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
-            <a href="carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
-            <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
-            <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
-            <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
-            <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
-            <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
-        </div>
-
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
+<body class="bg-black text-white">
+        <!-- Navbar -->
+        <nav class="bg-white p-4">
+          <div class="container mx-auto flex justify-between items-center bg-white">
+            <!--Logo -->
+            <div>
+              <a href="../index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
+            </div>
+            <!--Elementos del menú-->
+            <div class="hidden md:flex space-x-4">
+              <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
+              <a href="#" class="text-pink-600 hover:text-pink-900">Carta</a>
+              <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
+              <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+              <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+              <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+              <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
+            </div>
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
-            </button>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="menu" class="md:hidden hidden bg-white p-4">
+          <a href="#" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
+          <a href="reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
+          <a href="ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
+          <a href="donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
+          <a href="about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
+          <a href="shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
         </div>
-    </div>
-</nav>
-
-<!-- Menú desplegable para dispositivos móviles -->
-<div id="menu" class="md:hidden hidden bg-white p-4">
-    <a href="carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
-    <a href="reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
-    <a href="ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
-    <a href="donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
-    <a href="about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
-    <a href="shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
-</div>
-<main class="neon-bg">
-  <div class="max-w-3xl mx-auto mt-18 pt-28 bg-white shadow-md rounded-md">
-      <h1 class="text-3xl font-bold mb-6 neon-text">¿Dónde estamos?</h1>
-
-      <div class="aspect-w-12 aspect-h-9">
+      <main class="pt-24 flex flex-col min-h-screen landing">
+    <div class="max-w-5xl mx-auto m-10 bg-white shadow-md rounded-md p-8 neon-bg">
+        <h1 class="text-4xl font-bold mb-6 neon-text text-center mb-12">
+            ¿Dónde estamos?
+          </h1>
+        <div class="aspect-w-16 aspect-h-9 flex">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12165.964015340594!2d-3.8703129398039633!3d40.33145265080788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418f1582436da7%3A0x4139d64f1b19449!2sEl%20Caim%C3%A1n%20Mostoles!5e0!3m2!1ses!2ses!4v1700941466292!5m2!1ses!2ses"
-                  width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="60%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="text-sm text-pink-600 ml-10">Si llegaste aquí, es que no estamos muy lejos o tienes muchas ganas de conocernos.
+                    Disponemos de un local perfectamente acondicionado, para que vengas a disfrutar.
+                    <br><br>
+                    Nos puedes encontrar en C/Nardos 20,Móstoles,28933.
+                    <br><br>
+                    Si quieres reservar tu fiesta privada o Reservado, no dudes en contactar con nosotros.
+                    <br><br>
+                    Telefono: 643634945.
+                </p>
       </div>
-  </div>
+      
+</div>
 </main>
 
 <script src="../js/script.js"></script>
