@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>El Caiman Club</title>
-  <style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&family=Overpass+Mono:wght@500&display=swap" rel="stylesheet">
 
+  <style>
+      * {
+        font-family: 'Orbitron', sans-serif;
+      }
       .recomendacion {
           width: 274.65px; /* Ancho fijo */
           height: 330px; /* Alto fijo */
-          /* ... Otros estilos ... */
       }
 
       @media (max-width: 768px) {
@@ -19,17 +25,13 @@
           }
       }
 
-      .letras {
-          color: white;
-      }
-
-       main {
-           background-image: url('/src/img/fondos/fondo-carta.jpg');
+      .bgimg-carta {
           background-size: cover;
-          background-position: center;
+          background-image: url('../src/img/fondos/fondo-carta.jpg');
           background-repeat: no-repeat;
+          height: 100vh;
+          backdrop-filter: blur(5px);
       }
-
   </style>
 </head>
 <body class="bg-grey-500">
@@ -39,7 +41,7 @@
     <div class="container mx-auto flex justify-between items-center bg-white">
       <!--Logo -->
       <div>
-        <a href="../index.html"><img src="/src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
+        <a href="../index.html"><img src="../src/img/logo/caiman-logo.png" class="img-fluid" alt="El Caiman Club" height="25%" width="35%"></a>
       </div>
       <!--Elementos del menú-->
       <div class="hidden md:flex space-x-4">
@@ -72,7 +74,7 @@
     <a href="shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
   </div>
 </header>
-<main class="pt-24 flex flex-col min-h-screen"> <!-- Agregue padding-top para compensar el header fijo -->
+<main class="pt-24 flex flex-col min-h-screen bgimg-carta"> <!-- Agregue padding-top para compensar el header fijo -->
   <!-- Contenido de la página -->
   <div class="container mx-auto flex-1 p-8 flex justify-center items-center">
 
@@ -81,58 +83,58 @@
       <!-- Ajuste las clases aquí para pantallas grandes -->
 
       <!-- Categoría Combinados -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4"> <!-- Añade margen en la parte inferior -->
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4"> <!-- Añade margen en la parte inferior -->
         <a href="cartas/combinados.html" class="focus-target" data-message="" data-image="" data-description=""> <!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/combinado-neon.png" alt="Combinados" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Combinados</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Combinados</p>
         </a>
       </div>
 
       <!-- Categoría Cachimbas -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4">
-        <a href="cartas/cachimbas.html" class="focus-target" data-message="" data-image="/src/img/carta/recomendaciones/shisha.jpg" data-description=""> <!--TODO RELLENAR LOS DATA-->
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4">
+        <a href="cartas/cachimbas.html" class="focus-target" data-message="" data-image="" data-description=""> <!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/shisha-neon.png" alt="Cachimbas" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Cachimbas</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Cachimbas</p>
         </a>
       </div>
 
       <!-- Categoría Cócteles -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4">
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4">
         <a href="cartas/cocteles.html" class="focus-target" data-message="" data-image="" data-description=""> <!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/coctel-neon.png" alt="Cócteles" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Cócteles</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Cócteles</p>
         </a>
       </div>
 
       <!-- Categoría Cervezas -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4">
-        <a href="cartas/cervezas.html" class="focus-target" data-message="" data-image="/src/img/carta/recomendaciones/mojito.jpg" data-description=""> <!--TODO RELLENAR LOS DATA-->
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4">
+        <a href="cartas/cervezas.html" class="focus-target" data-message="" data-image="" data-description=""> <!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/cerveza-neon.png" alt="Cervezas" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Cervezas</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Cervezas</p>
         </a>
       </div>
 
       <!-- Categoría Vinos -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4">
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4">
         <a href="cartas/vinos.html" class="focus-target" data-message="" data-image="" data-description=""> <!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/vino-neon.png" alt="Vinos" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Vinos</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Vinos</p>
         </a>
       </div>
 
       <!-- Categoría Refrescos -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4">
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4">
         <a href="cartas/refrescos.html" class="focus-target" data-message="" data-image="" data-description=""><!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/refresco-neon.png" alt="Refrescos" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Refrescos</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Refrescos</p>
         </a>
       </div>
 
       <!-- Categoría Batidos -->
-      <div class="block lg:w-32 lg:h-32 md:w-24 md:h-24 w-20 h-20 text-center mb-4">
+      <div class="block lg:w-36 lg:h-36 md:w-28 md:h-28 w-24 h-24 text-center mb-4">
         <a href="cartas/batidos.html" class="focus-target" data-message="" data-image="" data-description=""><!--TODO RELLENAR LOS DATA-->
           <img src="../src/img/carta/png/batido-neon.png" alt="Batidos" class="w-full h-full rounded-lg shadow object-cover">
-          <p class="text-sm font-semibold mt-2 md:block letras">Batidos</p>
+          <p class="text-xl font-semibold mt-2 md:block neon-text">Batidos</p>
         </a>
       </div>
     </div>

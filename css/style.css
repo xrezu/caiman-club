@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*{
+  font-family: 'Orbitron', sans-serif;
+}
+
 .landingpage-bg {
   background-size: cover;
   background-image: url("../src/img/landingpage-bg.jpg");
@@ -7,9 +13,10 @@
 }
 
 .neon-text {
+  color: rgba(255, 255, 255, 0.8);
   text-shadow: 0 0 10px rgba(255, 0, 149, 0.8), 0 0 20px rgba(255, 0, 150, 0.8), 0 0 30px rgba(255, 0, 150, 0.8);
 }
 
 .neon-bg {
-  box-shadow: 0 0 20px rgba(255, 0, 150, 0.8), 0 0 30px rgba(255, 0, 150, 0.8), 0 0 40px rgba(255, 0, 150, 0.8);
+  box-shadow: 0 0 20px rgba(253, 150, 210, 0.8), 0 0 30px rgba(255, 0, 150, 0.8), 0 0 40px rgba(255, 0, 150, 0.8);
 }
