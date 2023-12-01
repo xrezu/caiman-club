@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&family=Overpass+Mono:wght@500&display=swap" rel="stylesheet">
   <title>El Caiman Club</title>
 </head>
+
 <body class="bg-black">
   <header class="fixed w-full z-10 mt-0">
     <!-- Navbar -->
@@ -18,10 +20,10 @@
       <div class="container mx-auto flex justify-between items-center bg-white">
         <!--Logo -->
         <div>
-          <a href="../index.html"><img src="../src/img/logo/caiman-logo.png" class="w-auto h-12" alt="El Caiman Club"></a>
+          <a href="../index.html"><img src="../../src/img/logo/caiman-logo.png" class="w-auto h-12" alt="El Caiman Club"></a>
         </div>
         <!--Elementos del menú-->
-        <div class="hidden md:flex space-x-4">
+        <div class="hidden lg:flex space-x-4">
           <a href="../../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
           <a href="../carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
           <a href="../reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
@@ -30,8 +32,8 @@
           <a href="../about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
           <a href="../shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
         </div>
-  
-        <div class="md:hidden">
+
+        <div class="lg:hidden">
           <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -40,9 +42,9 @@
         </div>
       </div>
     </nav>
-  
+
     <!-- Menú desplegable para dispositivos móviles -->
-    <div id="menu" class="md:hidden hidden bg-white p-4">
+    <div id="menu" class="lg:hidden hidden bg-white p-4">
       <a href="../../index.html" class="block text-pink-600 hover:text-pink-900 mb-2">Inicio</a>
       <a href="../carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
       <a href="../reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
@@ -51,20 +53,29 @@
       <a href="../about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
       <a href="../shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
     </div>
-  </header>  
-<main>
-  <div class="carta">
-    <div class="titulo-carta"><b>BATIDOS</b></div>
+  </header>
+  <main class="flex flex-col items-center justify-center h-screen">
+    <div class="carta neon-bg">
+      <div class="titulo-carta"><b>BATIDOS</b></div>
 
-    <div class="categoria">
-      <div class="producto"><span class="contenido">Batido Chocolate</span> <span class="precio">5€</span></div>
-      <div class="producto"><span class="contenido">Batido Vainilla</span> <span class="precio">5€</span></div>
-      <div class="producto"><span class="contenido">Batido Fresa</span> <span class="precio">5€</span></div>
-      <div class="producto"><span class="contenido">Batido de Kit-Kat</span> <span class="precio">6€</span></div>
-      <div class="producto"><span class="contenido">Batido de cookies</span> <span class="precio">6€</span></div>
+      <div class="categoria">
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16 ">Batido Chocolate</span> <span class="precio ml-10">5.00€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Batido Vainilla</span> <span class="precio ml-10">5.00€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Batido Fresa</span> <span class="precio ml-10">5.00€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Batido de Kit-Kat</span> <span class="precio ml-10">6.00€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Batido de cookies</span> <span class="precio ml-10">6.00€</span></div>
+      </div>
     </div>
-  </div>
-</main>
-<script src="../../js/script.js"></script>
+    <a href="../carta.html">
+      <button type="button" class="lg:text-2xl md:text-base sm:text-xs text-xs text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 
+    hover:from-pink-600 hover:via-pink-500 hover:to-pink-400 focus:ring-4 
+    focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 
+    dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 mt-8">
+        Volver a la carta
+      </button>
+    </a>
+  </main>
+  <script src="../../js/script.js"></script>
 </body>
+
 </html>

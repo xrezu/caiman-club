@@ -25,11 +25,18 @@ body {
 }
 
 .titulo-categoria {
-    font-size: 24px;
-    font-weight: bold;
+    font-weight: bolder;
     border-bottom: 2px solid #db2777;
     margin-bottom: 10px;
     padding-bottom: 5px;
+}
+
+.sub-categoria {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: #dbab27; /* Color de texto para la subcategoría */
+    border-bottom: 1px solid #dbab27; /* Línea de borde inferior */
 }
 
 .producto {
