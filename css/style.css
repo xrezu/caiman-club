@@ -22,3 +22,7 @@
 .neon-bg {
   box-shadow: 0 0 20px rgba(253, 150, 210, 0.8), 0 0 30px rgba(255, 0, 150, 0.8), 0 0 40px rgba(255, 0, 150, 0.8);
 }
+
+.titulo-oferta {
+  font-size: 24px;
+}
