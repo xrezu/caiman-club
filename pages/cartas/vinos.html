@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width. initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/carta.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&family=Overpass+Mono:wght@500&display=swap" rel="stylesheet">
   <title>El Caiman Club</title>
 </head>
-<body>
+
+<body class="bg-black">
   <header class="fixed w-full z-10 mt-0">
     <!-- Navbar -->
     <nav class="bg-white p-4 ">
@@ -48,17 +54,25 @@
       <a href="../shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
     </div>
   </header>
-  <main>
-    <div class="carta">
-      <div class="titulo-carta"><b>VINOS</b></div>
+  <main class="flex flex-col items-center justify-center h-screen">
+    <div class="carta neon-bg">
+      <div class="titulo-carta neon-text"><b>VINOS</b></div>
 
       <div class="categoria">
-        <div class="producto"><span class="contenido">Copa Rioja Tinto</span> <span class="precio">2,50€</span></div>
-        <div class="producto"><span class="contenido">Copa Alma Verdej</span> <span class="precio">2,50€</span></div>
-        <div class="producto"><span class="contenido">Botella Rioja Tinto</span> <span class="precio">13€</span></div>
-        <div class="producto"><span class="contenido">Botella Alma Verdejo</span> <span class="precio">13€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Copa Rioja Tinto</span> <span class="precio">2,50€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Copa Alma Verdej</span> <span class="precio">2,50€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Botella Rioja Tinto</span> <span class="precio">13€</span></div>
+        <div class="producto lg:text-xl md:text-base sm:text-xs text-xs"><span class="contenido mr-16">Botella Alma Verdejo</span> <span class="precio">13€</span></div>
       </div>
     </div>
+    <a href="../carta.html">
+      <button type="button" class="lg:text-2xl md:text-base sm:text-xs text-xs text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 
+    hover:from-pink-600 hover:via-pink-500 hover:to-pink-400 focus:ring-4 
+    focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 
+    dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 mt-8">
+        Volver a la carta
+      </button>
+    </a>
   </main>
 
 <script src="../../js/script.js"></script>
