@@ -14,17 +14,17 @@ function validarFormulario(event) {
 
   // Obtenemos los valores de los campos de formulario
   var nombre = document.getElementById('nombre').value;
-  var telefono = document.getElementById('telefono');
-  var email = document.getElementById('email');
-  var fecha = document.getElementById('fecha');
-  var hora = document.getElementById('hora');
+  var telefono = document.getElementById('telefono').value;
+  var email = document.getElementById('email').value;
+  var fecha = document.getElementById('fecha').value;
+  var hora = document.getElementById('hora').value;
   var numComensales = document.getElementById('numComensales').value;
 
   // Flag para evitar múltiples alertas
   var hayErrores = false;
 
   // Comprobamos que no haya campos vacíos
-  if (!nombre || !telefono.value || !email.value || !fecha.value || !hora.value || !numComensales) {
+  if (!nombre || !telefono || !email || !fecha || !hora || !numComensales) {
     Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
     hayErrores = true;
     return;
@@ -32,39 +32,37 @@ function validarFormulario(event) {
 
   // Validación del formato del teléfono móvil
   var telefonoRegex = /^[0-9]{9}$/;
-  if (!telefonoRegex.test(telefono.value)) {
+  if (!telefonoRegex.test(telefono)) {
     Swal.fire('Error', 'Formato de teléfono móvil incorrecto. Debe tener 9 dígitos.', 'error');
-    telefono.value = '';
     hayErrores = true;
     return;
   }
 
   // Validación del formato de correo electrónico
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email.value)) {
+  if (!emailRegex.test(email)) {
     Swal.fire('Error', 'Formato de correo electrónico incorrecto.', 'error');
-    email.value = '';
     hayErrores = true;
     return;
   }
 
   // Validación de días y horarios permitidos
-  var dia = new Date(fecha.value).getDay();
-  var horaReserva = new Date('1970-01-01 ' + hora.value);
+  var dia = new Date(fecha).getDay();
+  var horaReserva = new Date('1970-01-01 ' + hora);
   var horaLimiteInicio = new Date('1970-01-01 20:30');
   var horaLimiteFin = new Date('1970-01-01 02:30');
+  //TODO: Solucionar problema de horarios
+  // if (dia < 4 || dia > 0) {
+  //   Swal.fire('Error', 'Las reservas solo están disponibles de jueves a domingo.', 'error');
+  //   hayErrores = true;
+  //   return;
+  // }
 
-  if (dia < 4 || dia > 0) {
-    Swal.fire('Error', 'Las reservas solo están disponibles de jueves a domingo.', 'error');
-    hayErrores = true;
-    return;
-  }
-
-  if (horaReserva < horaLimiteInicio || horaReserva > horaLimiteFin) {
-    Swal.fire('Error', 'Las reservas solo están disponibles de 20:30 a 2:30.', 'error');
-    hayErrores = true;
-    return;
-  }
+  // if (horaReserva < horaLimiteInicio || horaReserva > horaLimiteFin) {
+  //   Swal.fire('Error', 'Las reservas solo están disponibles de 20:30 a 2:30.', 'error');
+  //   hayErrores = true;
+  //   return;
+  // }
 
   // Si hay errores, no se envía el formulario
   if (hayErrores) {
@@ -79,8 +77,11 @@ function validarFormulario(event) {
     confirmButtonText: 'Ir a "Donde estamos"',
   }).then((result) => {
     if (result.isConfirmed) {
-      // Envía el formulario manualmente
-      document.getElementById('miFormulario').submit();
+      // Hecha redirección directa a "Donde estamos"
+      window.location.href = 'donde-estamos.html';
     }
-  });
+  });  
 }
+
+// Agrega el evento de submit al formulario
+document.getElementById('miFormulario').addEventListener('submit', validarFormulario);
