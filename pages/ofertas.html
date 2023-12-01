@@ -2,68 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Title</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/ofertas.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="../css/style.css" rel="stylesheet">
 </head>
-<body class="bg-black">
-  <header class="fixed w-full z-10">
-    <!-- Navbar -->
-    <nav class="bg-white p-4">
-      <div class="container mx-auto flex justify-between items-center bg-white">
-        <!--Logo -->
-        <div>
-          <a href="../index.html"><img src="../src/img/logo/caiman-logo.png" class="w-auto h-12" alt="El Caiman Club"></a>
-        </div>
-        <!--Elementos del menú-->
-        <div class="hidden lg:flex space-x-4">
-          <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
-          <a href="carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
-          <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
-          <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
-          <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
-          <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
-          <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
-        </div>
-  
-        <div class="lg:hidden">
-          <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-        </div>
+<body class="bg-black"> <!-- Añadido padding-top aquí -->
+<header class="fixed w-full z-10">
+  <!-- Navbar -->
+  <nav class="bg-white p-4">
+    <div class="container mx-auto flex justify-between items-center bg-white">
+      <!--Logo -->
+      <div>
+        <a href="../index.html"><img src="../src/img/logo/caiman-logo.png" class="w-auto h-12" alt="El Caiman Club"></a>
       </div>
-    </nav>
-  
-    <!-- Menú desplegable para dispositivos móviles -->
-    <div id="menu" class="lg:hidden hidden bg-white p-4">
-      <a href="../index.html" class="block text-pink-600 hover:text-pink-900 mb-2">Inicio</a>
-      <a href="carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
-      <a href="reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
-      <a href="ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
-      <a href="donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
-      <a href="about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
-      <a href="shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
+      <!--Elementos del menú-->
+      <div class="hidden lg:flex space-x-4">
+        <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
+        <a href="carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
+        <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
+        <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+        <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+        <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+        <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
+      </div>
+
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-  </header>
-<main class="mt-20">
-  <div class="p-6 m-4 rounded-lg border-4 border-pink-600 text-white">
-    <h2 class="text-pink-500 text-2xl font-bold mb-3">COPAS a 5€ TODO NOVIEMBRE</h2>
-    <p>Disfruta de nuestras exclusivas copas a un precio especial durante todo noviembre.</p>
+  </nav>
+
+  <!-- Menú desplegable para dispositivos móviles -->
+  <div id="menu" class="lg:hidden hidden bg-white p-4">
+    <a href="../index.html" class="block text-pink-600 hover:text-pink-900 mb-2">Inicio</a>
+    <a href="carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
+    <a href="reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
+    <a href="ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
+    <a href="donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
+    <a href="about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
+    <a href="shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
+  </div>
+</header>
+
+<main class="pt-20">
+  <div class="p-6 m-4 text-white text-center">
+    <h2 class="text-pink-500 text-3xl lg:text-4xl font-bold mb-3">Ofertas Exclusivas y Eventos Inolvidables</h2>
+    <p class="text-xl">Descubre nuestras promociones especiales y vive noches llenas de diversión y sabor en El Caimán Club.</p>
   </div>
 
-  <div class="bg-black text-white p-6 m-4 rounded-lg border-4 border-pink-600 neon-effect">
-    <div class="oferta">
-      <h2 class="titulo-oferta">COPAS a 5€ TODO NOVIEMBRE</h2>
-      <img src="ruta/a/imagen-de-copas.jpg" alt="Copas a 5€">
-      <p>Disfruta de nuestras copas a un precio especial durante todo noviembre.</p>
+
+  <!-- Contenedor de ofertas con espaciado uniforme en todos los tamaños de pantalla -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mx-4">
+    <div class="bg-black text-white p-4 rounded-lg neon-bg">
+      <div class="p-5 text-center">
+        <h2 class="titulo-oferta neon-text">COPAS a 5€ TODO NOVIEMBRE</h2>
+        <img alt="Copas a 5€" class="w-full h-auto" src="ruta/a/imagen-de-copas.jpg">
+        <p class="text-pink-600">Disfruta de nuestras copas a un precio especial durante todo noviembre.</p>
+      </div>
+    </div>
+
+    <div class="bg-black text-white p-4 rounded-lg neon-bg">
+      <h2 class="titulo-oferta neon-text">4 TERCIOS ALHAMBRA 10€</h2>
+      <img alt="Tercios Alhambra" class="w-full h-auto" src="ruta/a/imagen-de-cervezas.jpg">
+      <p class="text-pink-600">Aprovecha nuestra oferta en cervezas Alhambra, perfectas para compartir.</p>
+    </div>
+
+
+    <div class="bg-black text-white p-4 rounded-lg neon-bg">
+      <h2 class="titulo-oferta neon-text">CON 4 COCTELES, SHISHAS AL 50%</h2>
+      <img alt="Cocteles y Shishas" class="w-full h-auto" src="ruta/a/imagen-de-cocteles.jpg">
+      <p class="text-pink-600">Disfruta la mitad de precio en todas las shishas al pedir 4 cócteles.</p>
+    </div>
+
+
+    <div class="bg-black text-white p-4 rounded-lg neon-bg">
+      <h2 class="titulo-oferta neon-text">AMPLIA VARIEDAD DE SHISHAS Y CERVEZAS</h2>
+      <img alt="Variedad de Shishas y Cervezas" class="w-full h-auto" src="ruta/a/imagen-de-shishas.jpg">
+      <p class="text-pink-600">Explora más de 25 sabores de shishas y más de 10 tipos de cervezas.</p>
     </div>
   </div>
+
 
 </main>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="../js/script.js"></script>
 </body>
 </html>
