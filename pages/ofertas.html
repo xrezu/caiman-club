@@ -8,31 +8,30 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="../css/style.css" rel="stylesheet">
 </head>
-<body class="bg-black pt-20"> <!-- Añadido padding-top aquí -->
-<header class="fixed w-full z-10 top-0">
+<body class="bg-black"> <!-- Añadido padding-top aquí -->
+<header class="fixed w-full z-10">
   <!-- Navbar -->
   <nav class="bg-white p-4">
     <div class="container mx-auto flex justify-between items-center bg-white">
       <!--Logo -->
       <div>
-        <a href="../index.html"><img alt="El Caiman Club" class="img-fluid" height="25%"
-                                     src="/src/img/logo/caiman-logo.png" width="35%"></a>
+        <a href="../index.html"><img src="../src/img/logo/caiman-logo.png" class="w-auto h-12" alt="El Caiman Club"></a>
       </div>
       <!--Elementos del menú-->
-      <div class="hidden md:flex space-x-4">
-        <a class="text-pink-600 hover:text-pink-900" href="../index.html">Inicio</a>
-        <a class="text-pink-600 hover:text-pink-900" href="carta.html">Carta</a>
-        <a class="text-pink-600 hover:text-pink-900" href="reservas.html">Reservas</a>
-        <a class="text-pink-600 hover:text-pink-900" href="#">Ofertas y eventos</a>
-        <a class="text-pink-600 hover:text-pink-900" href="donde-estamos.html">Donde estamos</a>
-        <a class="text-pink-600 hover:text-pink-900" href="about-us.html">Nosotros</a>
-        <a class="text-pink-600 hover:text-pink-900" href="shop.html">Shop</a>
+      <div class="hidden lg:flex space-x-4">
+        <a href="../index.html" class="text-pink-600 hover:text-pink-900">Inicio</a>
+        <a href="carta.html" class="text-pink-600 hover:text-pink-900">Carta</a>
+        <a href="reservas.html" class="text-pink-600 hover:text-pink-900">Reservas</a>
+        <a href="ofertas.html" class="text-pink-600 hover:text-pink-900">Ofertas y eventos</a>
+        <a href="donde-estamos.html" class="text-pink-600 hover:text-pink-900">Donde estamos</a>
+        <a href="about-us.html" class="text-pink-600 hover:text-pink-900">Nosotros</a>
+        <a href="shop.html" class="text-pink-600 hover:text-pink-900">Shop</a>
       </div>
 
-      <div class="md:hidden">
-        <button class="text-pink-600 hover:text-pink-900" id="menu-toggle">
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-pink-600 hover:text-pink-900">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
       </div>
@@ -40,40 +39,23 @@
   </nav>
 
   <!-- Menú desplegable para dispositivos móviles -->
-  <div class="md:hidden hidden bg-white p-4" id="menu">
-    <a class="block text-pink-600 hover:text-pink-900 mb-2" href="carta.html">Carta</a>
-    <a class="block text-pink-600 hover:text-pink-900 mb-2" href="reservas.html">Reservas</a>
-    <a class="block text-pink-600 hover:text-pink-900 mb-2" href="#">Ofertas y eventos</a>
-    <a class="block text-pink-600 hover:text-pink-900 mb-2" href="donde-estamos.html">Donde estamos</a>
-    <a class="block text-pink-600 hover:text-pink-900 mb-2" href="about-us.html">Nosotros</a>
-    <a class="block text-pink-600 hover:text-pink-900 mb-2" href="shop.html">Shop</a>
+  <div id="menu" class="lg:hidden hidden bg-white p-4">
+    <a href="../index.html" class="block text-pink-600 hover:text-pink-900 mb-2">Inicio</a>
+    <a href="carta.html" class="block text-pink-600 hover:text-pink-900 mb-2">Carta</a>
+    <a href="reservas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Reservas</a>
+    <a href="ofertas.html" class="block text-pink-600 hover:text-pink-900 mb-2">Ofertas y eventos</a>
+    <a href="donde-estamos.html" class="block text-pink-600 hover:text-pink-900 mb-2">Donde estamos</a>
+    <a href="about-us.html" class="block text-pink-600 hover:text-pink-900 mb-2">Nosotros</a>
+    <a href="shop.html" class="block text-pink-600 hover:text-pink-900 mb-2">Shop</a>
   </div>
 </header>
 
-<main>
+<main class="pt-20">
   <div class="p-6 m-4 text-white text-center">
     <h2 class="text-pink-500 text-3xl lg:text-4xl font-bold mb-3">Ofertas Exclusivas y Eventos Inolvidables</h2>
     <p class="text-xl">Descubre nuestras promociones especiales y vive noches llenas de diversión y sabor en El Caimán Club.</p>
   </div>
 
-  <!-- Carrusel de Imágenes para Eventos -->
-  <div class="my-8">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide"><img src="ruta/a/evento1.jpg" alt="Evento 1"></div>
-        <div class="swiper-slide"><img src="ruta/a/evento2.jpg" alt="Evento 2"></div>
-        <div class="swiper-slide"><img src="ruta/a/evento3.jpg" alt="Evento 3"></div>
-        <!-- Añadir más slides según sea necesario -->
-      </div>
-      <!-- Si necesitas paginación -->
-      <div class="swiper-pagination"></div>
-
-      <!-- Si necesitas navegación -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </div>
 
   <!-- Contenedor de ofertas con espaciado uniforme en todos los tamaños de pantalla -->
   <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mx-4">
