@@ -26,3 +26,17 @@
 .titulo-oferta {
   font-size: 24px;
 }
+
+.swiper-slide {
+  height: 300px; /* Altura fija */
+  width: 500px; /* Ancho fijo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover; /* O 'contain' según tus necesidades */
+}
